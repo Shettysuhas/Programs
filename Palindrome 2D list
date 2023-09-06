@@ -1,0 +1,16 @@
+def strings(b):
+    g=[]
+    c=0
+    for i in range(len(b)):
+        s=b[i]
+        for j in range ((len(b))):
+            if i==j:
+                continue
+            if s[::-1]==b[j]:
+                g.append([b[j],b[i]])
+                b.pop(j)
+                b.insert(j,str(c))
+                c+=1
+    return g
+b=list(map(str,input().split()))
+print(strings(b))
