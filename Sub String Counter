@@ -1,0 +1,13 @@
+def counter(s):
+    c=0
+    a=['01','10','000','001','1000']
+    for i in range(len(a)):
+        l=len(a[i])
+        for j in range(len(s)-(len(a[i])-1)):
+            if a[i]==s[j:l]:
+                c+=1
+            l+=1
+    return c
+s=input()
+r=counter(s)
+print(r)
